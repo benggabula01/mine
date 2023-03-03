@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        body{
+            background-color: grey;
+            font-family: 'Oswald',sans-serif;
+        }
+
+        #btn-alert{
+            border: none;
+            border-radius: 5px;
+            padding: 7px 10px;
+            background-color: rgb(3, 110, 182);
+            font-size: 1.3em;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.2s;
+            position: fixed;
+            left: 47%;
+            top: 45%;
+        }
+        #btn-alert:hover{
+            opacity: 0.8;
+        }
+        #btn-alert:focus{
+            outline: rgb(3, 110, 182) solid 3px;
+            outline-offset: 3px;
+        }
+        @media (max-width: 576px){
+            #btn-alert{
+                left: 40%;
+            }
+        }
+    </style>
+    <title>Merlyanti</title>
+</head>
+<body>
+
+    <button id="btn-alert" onclick="munculinAlert()">Pici Disini!</button>
+    <audio controls src="musik/hbd.mp3"></audio>
+
+    <script>
+        async function munculinAlert() {
+            await Swal.fire('Hai cantik.... ini spesial loh, hehehe dibaca pelan-pelan yahhh')
+            await Swal.fire('Selamat Ulang Tahun ya...:)')
+            await Swal.fire({
+                title: 'Happy Birthday yang ke 20-th Bocil',
+                text: 'Semoga panjang umur, sehat selalu diberkati dalam keluarga,pekerjaan atau apapn yang sayang rencanakan. maaf yah selama ini belum bisa jadi yang terbaik hehehe,sayang banyak berdoa pokonya i love you so much sehat terus yahh kesayangan aku, God Bless You 😇😇.',
+                imageUrl: 'img/1.jpg',
+                imageWidth: 400,
+                imageHeight: 300,
+                imageAlt: 'gambar pasangan',
+            })
+            await Swal.fire({
+                title: 'sayang sukaaaaaaaaa?',
+                text: "dijawab jujur yah bucuuu!",
+                icon: 'question',
+                showDenyButton: true,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'suka sekali',
+                denyButtonText: `tidak suka`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Semoga Diingat terus yahh',
+                    text: 'Nanti Hadiahnya nyusul yahh sayang, ado usaha selalu lakukan yang terbaik buat sayang. i love you 🥰',
+                    imageUrl: 'img/2.jpg',
+                    imageWidth: 400,
+                    imageHeight: 300,
+                    imageAlt: 'gambar orang berdekatan',
+                })
+
+                }else{
+                Swal.fire({
+                    title: 'Yah tidak disuka',
+                    text: 'Tpp sayang 😉, tetap ado doakan yang terbaik buat sayang, ado sayang sekali sama sayang. ado usaha jadi yang terbaik buat sayang😊',
+                    imageUrl: 'img/3.jpg',
+                    imageWidth: 400,
+                    imageHeight: 300,
+                    imageAlt: 'gambar lucu',   
+                })
+            }            
+        })
+    }
+    </script>
+    
+</body>
+</html>
